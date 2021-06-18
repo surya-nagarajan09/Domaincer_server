@@ -23,7 +23,7 @@ const jwt_secret=process.env.JWT_SECRET;
 
 
 const db_url=process.env.DB_URL || "mongodb://127.0.0.1:27017/";
-const port=process.env.port || 4000;
+const port=process.env.PORT || 4000;
 
 app.get("/all",async(req, res)=>{
     const client= await mongoClient.connect(db_url);
