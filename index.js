@@ -116,7 +116,7 @@ app.post("/register-company",async(req,res)=>{
             number:req.body.number,
             email:req.body.email,
             pwd:req.body.pwd,
-            company:req.body.companyName,
+            company:req.body.cname,
         }
 
         const finduser = await db.collection("recruiter").findOne({email:userData.email})
