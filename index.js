@@ -147,12 +147,8 @@ app.post("/login-recruiter",async(req,res)=>{
     const client= await mongoClient.connect(db_url);
     if(client){
         let userData={
-            name:req.body.name,
-            number:req.body.number,
             email:req.body.email,
             pwd:req.body.pwd,
-            company:req.body.companyName,
-            id:req.body.objectId
         }
         try{
             const db=client.db("jobseeker");
